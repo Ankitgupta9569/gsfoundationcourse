@@ -3,107 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for Icons -->
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio & ML Engineer</title>
+   
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
+   <!-- Include Font Awesome in the head section -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+
+<!-- Header Section with Navbar and Icons -->
+<header>
+    <div class="container">
+        <h1>Ankit Gupta - Machine Learning Enthusiast</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#vloge">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Ankit Gupta</h1>
-        <p>Machine Learning & Artificial intelligence Ethueist</p>
-        <a href="#projects" class="button">View Projects</a>
-        <a href="Ankit_Gupta_ML (3).pdf" class="button">Download Resume</a>
+<!-- Make sure to include Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am currently pursuing a Bachelor’s degree in Computer Science Engineering from BM Group of Institutions, with a strong focus on Machine Learning and Artificial Intelligence. Over the course of my academic journey, I have successfully developed more than 15 machine learning projects, some of which are deployed in real-world applications. I am passionate about leveraging data and AI to solve complex problems and make impactful contributions.
+
+I have hands-on experience in Python, TensorFlow, PyTorch, and various ML algorithms, with a deep understanding of data preprocessing, model training, and evaluation. I am eager to apply my skills and knowledge in a practical setting, collaborate with industry professionals, and further refine my expertise in the field.
+
+I am excited about the opportunity to grow as a machine learning engineer and contribute innovative solutions to real-world challenges.
+
+.</p>
+        </div>
+<!-- Download Resume Button -->
+        <div class="resume-download">
+            <a href="Ankit_Gupta_ML.pdf" download="Ankit_Gupta_Resume" class="btn-download">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </div>
     </section>
+
+   <!-- Skills Section -->
+   <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li><button>Python</button></li>
+        <li><button>Deep Learning</button></li>
+        <li><button>Machine Learning</button></li>
+        <li><button>Natural Language Processing</button></li>
+        <li><button>Structured Query Language</button></li>
+        <li><button>MLOps</button></li>
+        <li><button>Data Structures & Algorithms</button></li>
+        <li><button>Numpy, Pandas, Seaborn, Keras, TensorFlow</button></li>
+        <li><button>Version Control System [GitHub]</button></li>
+        <li><button>LLM & LangChain</button></li>
+        <li><button>Docker</button></li>
+        <li><button>FastAPI</button></li>
+        <li><button>Time Management</button></li>
+        <li><button>Leadership</button></li>
+    </ul>
+</section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project-cards">
-            <div class="card">
-                <h3>House price Prediction</h3>
-                <p>The "House Price Prediction" project is designed to predict house prices based on various features such as location, size, number of rooms, and more. By utilizing machine learning algorithms like Linear Regression, Random Forest, and XGBoost, the project aims to offer accurate price predictions, assisting stakeholders in making informed decisions in the real estate market.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="card">
-                <h3>Spam Mail Classifire</h3>
-                <p>The "Spam Mail Classifier" project is designed to accurately identify and filter out spam emails using machine learning algorithms. By leveraging models like Naive Bayes, Support Vector Machines (SVM), and Random Forest, the project ensures that users' inboxes remain free of unwanted and potentially harmful spam messages.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="card">
-                <h3>Movie Recommender System</h3>
-                <p>The "Movie Recommender System" project aims to provide personalized movie recommendations by analyzing user preferences and viewing history. By employing collaborative filtering, content-based filtering, and hybrid models, the project delivers relevant movie suggestions, enhancing the user's viewing experience</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="card">
-                <h3>Credit Card Froud Dectection</h3>
-                <p>The "Credit Card Detection" project is designed to automate the identification and classification of credit card numbers using machine learning algorithms, particularly Convolutional Neural Networks (CNNs). The system is capable of detecting and masking credit card numbers in real-time from various inputs like images and videos. The project aims to enhance security by preventing unauthorized access or misuse of credit card information</p>
-                <a href="#">View Project</a>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-boxes">
+                <div class="project-box">
+                    <h3>Cancer Diseases Prediction</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde accusamus amet necessitatibus suscipit deserunt quae, id in autem quia molestias explicabo dolor repellendus assumenda accusantium quas dolorem maxime officiis a!</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/yourproject1" class="project-btn btn-github">GitHub</a>
+                        <a href="https://liveproject1.com" class="project-btn btn-live">Live</a>
+                    </div>
+                </div>
+    
+                <div class="project-box">
+                    <h3>Stock Price Prediction</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi voluptatum facere laudantium distinctio ut perspiciatis quam consequuntur magnam! Consectetur temporibus perferendis est voluptate odit sit dolorum quis, sunt laborum modi aspernatur aperiam ab?.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/yourproject2" class="project-btn btn-github">GitHub</a>
+                        <a href="https://liveproject2.com" class="project-btn btn-live">Live</a>
+                    </div>
+                </div>
+                <!-- Add more project-boxes here -->
+                <div class="project-box">
+                    <h3>Credit Card Froud Detection</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, ullam, maiores illo atque ipsam id aliquam earum recusandae ducimus rerum deserunt. Corrupti, exercitationem. Voluptatibus maxime beatae deleniti, facilis voluptates porro!</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/yourproject2" class="project-btn btn-github">GitHub</a>
+                        <a href="https://liveproject2.com" class="project-btn btn-live">Live</a>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h3>Movie Recommender System</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti recusandae, ipsa quisquam numquam voluptate et quidem. Deserunt nulla, repellendus dolorum voluptatum, qui, sunt sed excepturi tempora a et nesciunt quaerat.</p>
+                    <div class="project-buttons">
+                        <a href="https://github.com/yourproject2" class="project-btn btn-github">GitHub</a>
+                        <a href="https://liveproject2.com" class="project-btn btn-live">Live</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Hello! I'm Ankit Gupta, a passionate Ml Engineer with a focus on creating Ml Modeles I recentrly Completed Bachaler Of Technolgy in Computer Science Engineering And Also I completed 45 Day Internship in Ai & Ml From CloudCredit Technology. I wnat Implement My Hands Of Exprience Making Machine Learing Model And Projects During Machine Learning Internchip I make Many Projects Like Credit Card Detection And Object Dection Model</p>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="Vloge" class="section">
-        <h2>Resume</h2>
-        <p>Click the button above to download my resume.</p>
-    </section>
-    <!-- Video Introduction Section -->
-    <section id="intro-video" class="video-section">
-    <h2>Introduction</h2>
-    <video controls>
-        <source src="path-to-your-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    </section>
-
-
-
+    
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <form action="#">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Submit</button>
-        </form>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
-    <!-- Footer with Social Icons -->
+    <!-- Footer Section with Social Media Icons -->
     <footer>
-        <p>&copy; 2024 Ankit Gupta. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/ankitgupta2026" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/ankitgupta9569" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="container">
+            <p>Connect with me on social media:</p>
+            <ul class="social-links">
+                <li><a href="https://linkedin.com/in/ankitgupta2026" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/ankitgupta9569" target="_blank"><i class="fab fa-github"></i></a></li>
+               <li><a href="https://instagram.com/ankitgupta_2026" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p>&copy; 2024 Ankit Gupta Portfolio</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
