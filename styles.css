@@ -12,6 +12,84 @@ body {
     color: #333;
 }
 
+/* Achievement Section Styling */
+.achievements {
+    padding: 50px 20px;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+.achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.achievements p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.achievement-item {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.achievement-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.achievement-item a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.achievement-item a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Styling for Achievements */
+@media (max-width: 768px) {
+    .achievement-item {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
 /* Header */
 .header {
     background: #007bff;
@@ -381,3 +459,89 @@ body {
 .social-icon.instagram {
     color: #e4405f;
                                }
+                               
+                               
+                               
+                               
+                               
+/* Certificates Section Styling */
+.certificates {
+    padding: 50px 20px;
+    background: #f4f4f9;
+    text-align: center;
+}
+
+.certificates h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.certificates p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.certificate-card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.certificate-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.certificate-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.certificate-card .btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.certificate-card .btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Styling for Certificates */
+@media (max-width: 768px) {
+    .certificate-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .certificate-card img {
+        max-width: 80%;
+    }
+}
