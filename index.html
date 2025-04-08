@@ -1,234 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Machine Learning Intern Portfolio - Showcasing skills, projects, and contact details">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ML Intern Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankit - AI Engineer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #ffffff;
+      color: #1a202c;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #1e3a8a;
+      font-weight: bold;
+    }
+    header p {
+      margin-top: 1rem;
+      color: #4b5563;
+    }
+    .social-links {
+      margin-top: 1.5rem;
+    }
+    .social-links a {
+      margin: 0 0.5rem;
+      color: #1e3a8a;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .intro-video {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .intro-video iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 360px;
+      border: none;
+      border-radius: 0.5rem;
+    }
+    .projects {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .project {
+      border: 1px solid #e5e7eb;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0.5rem;
+      transition: box-shadow 0.3s;
+      background-color: #f9fafb;
+    }
+    .project:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+    .project-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #1e3a8a;
+    }
+    .project-desc {
+      color: #374151;
+      margin: 0.5rem 0 1rem;
+    }
+    .project-tech {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+    .project a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .about {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background-color: #f1f5f9;
+      border-radius: 0.5rem;
+    }
+    .about h2 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .about p {
+      color: #374151;
+      line-height: 1.6;
+    }
+    .blog {
+      max-width: 900px;
+      margin: 3rem auto;
+    }
+    .blog h2 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .post {
+      margin-bottom: 1.5rem;
+    }
+    .post-title {
+      font-size: 1.2rem;
+      color: #1e3a8a;
+      font-weight: bold;
+    }
+    .post-date {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .post-desc {
+      color: #374151;
+    }
+    .certificates {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background-color: #f9fafb;
+      border-radius: 0.5rem;
+    }
+    .certificates h2 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .certificates ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      color: #374151;
+    }
+    .certificates li {
+      margin-bottom: 0.5rem;
+    }
+    .contact {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background-color: #f1f5f9;
+      border-radius: 0.5rem;
+    }
+    .contact h2 {
+      color: #1e3a8a;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .contact p {
+      color: #374151;
+      margin-bottom: 0.5rem;
+    }
+    .contact a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <h1>Ankit Gupta</h1>
-            <p>Machine Learning Intern | AI Enthusiast</p>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
-            <p>
-                Hello! I am Ankit Gupta, a Machine Learning Intern currently pursuing a B.Tech in Computer Science Engineering.
-                I have hands-on experience in Python, TensorFlow, PyTorch, and other ML tools. With over 15 projects deployed in real-world applications,
-                I am passionate about leveraging AI to solve complex problems.
-            </p>
-            <a href="Ankit_Gupta_ML.pdf" download class="btn">Download Resume</a>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Python</li>
-                <li>Machine Learning</li>
-                <li>Deep Learning</li>
-                <li>Natural Language Processing</li>
-                <li>TensorFlow & PyTorch</li>
-                <li>Data Structures & Algorithms</li>
-                <li>SQL</li>
-                <li>Version Control (Git)</li>
-                <li>MLOps</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <img src="images/project1.jpg" alt="Credit Card Fraud Detection">
-                <h3>Credit Card Fraud Detection</h3>
-                <p>
-                    Built a machine learning model to detect fraudulent transactions using Random Forest and Neural Networks.
-                    Improved security by accurately identifying suspicious activities.
-                </p>
-                <a href="https://github.com/ankitgupta9569" class="btn" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project-card">
-                <img src="images/project2.jpg" alt="Loan Status Prediction">
-                <h3>Loan Status Prediction</h3>
-                <p>
-                    Developed a system to predict loan approval status based on customer data. 
-                    Applied Logistic Regression and Decision Trees for classification.
-                </p>
-                <a href="https://github.com/ankitgupta9569" class="btn" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-    </section>
-<!-- Skill Experience Section -->
-<section id="experience" class="experience">
-    <div class="container">
-        <h2>Skill Experience</h2>
-        <p>These are my core technical skills with proficiency levels.</p>
-        <div class="skills-circle">
-            <div class="circle">
-                <div class="progress" data-percentage="90">
-                    <span class="percentage">90%</span>
-                    <span class="skill-label">Python</span>
-                </div>
-            </div>
-            <div class="circle">
-                <div class="progress" data-percentage="85">
-                    <span class="percentage">85%</span>
-                    <span class="skill-label">Machine Learning</span>
-                </div>
-            </div>
-            <div class="circle">
-                <div class="progress" data-percentage="80">
-                    <span class="percentage">80%</span>
-                    <span class="skill-label">Deep Learning</span>
-                </div>
-            </div>
-            <div class="circle">
-                <div class="progress" data-percentage="75">
-                    <span class="percentage">75%</span>
-                    <span class="skill-label">NLP</span>
-                </div>
-            </div>
-        </div>
+  <header>
+    <h1>Ankit - AI Engineer</h1>
+    <p>Building intelligent solutions for the future | AI, ML, LLMs, CV</p>
+    <div class="social-links">
+      <a href="mailto:ankit@example.com">📧</a>
+      <a href="https://github.com/ankit" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/ankit" target="_blank">LinkedIn</a>
+      <a href="https://medium.com/@ankit" target="_blank">Medium</a>
     </div>
-</section>
-<!-- Certificates Section -->
-<section id="certificates" class="certificates">
-    <div class="container">
-        <h2>🏆 Certificates</h2>
-        <p>Here are some of the certifications I have earned to showcase my expertise:</p>
-        
-        <div class="certificate-card">
-            <img src="images/certificate1.jpg" alt="Machine Learning Certification">
-            <h3>Machine Learning Certification</h3>
-            <p>Completed a comprehensive course on Machine Learning, covering algorithms, models, and practical applications.</p>
-            <a href="https://www.example.com/certificate1" target="_blank" class="btn">View Certificate</a>
-        </div>
-
-        <div class="certificate-card">
-            <img src="images/certificate2.jpg" alt="Deep Learning Certification">
-            <h3>Deep Learning Certification</h3>
-            <p>Earned certification in Deep Learning with a focus on neural networks and their applications in AI.</p>
-            <a href="https://www.example.com/certificate2" target="_blank" class="btn">View Certificate</a>
-        </div>
-
+    <div class="intro-video">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Ankit Intro Video" allowfullscreen></iframe>
     </div>
-</section>
-<section class="achievements">
-    <h2>My Achievements</h2>
-    <p>Here are some of my notable accomplishments:</p>
-    <ul class="achievement-list">
-        <li class="achievement-item">
-            <h3>Achievement Title</h3>
-            <p>Short description of the achievement or project.</p>
-            <a href="link-to-achievement" target="_blank">Learn More</a>
-        </li>
-        <li class="achievement-item">
-            <h3>Achievement Title</h3>
-            <p>Short description of the achievement or project.</p>
-            <a href="link-to-achievement" target="_blank">Learn More</a>
-        </li>
-        <!-- More items can be added similarly -->
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I’m Ankit, a passionate AI Engineer with hands-on experience in building smart applications using Machine Learning, Deep Learning, and LLMs. I enjoy working on real-world problems and turning ideas into intelligent, impactful solutions. I'm currently open to AI/ML opportunities and collaborations.</p>
+  </section>
+
+  <section class="projects">
+    <div class="project">
+      <div class="project-title">AI PDF Chatbot</div>
+      <div class="project-tech">LangChain, OpenAI, ChromaDB</div>
+      <div class="project-desc">Chat with any PDF using LangChain, OpenAI & ChromaDB.</div>
+      <a href="https://github.com/ankit/ai-pdf-chatbot" target="_blank">View on GitHub →</a>
+    </div>
+    <div class="project">
+      <div class="project-title">Face Recognition Attendance System</div>
+      <div class="project-tech">OpenCV, Python, FaceNet</div>
+      <div class="project-desc">Real-time face detection and attendance logging with OpenCV.</div>
+      <a href="https://github.com/ankit/face-attendance" target="_blank">View on GitHub →</a>
+    </div>
+    <div class="project">
+      <div class="project-title">Crop Disease Detector</div>
+      <div class="project-tech">CNN, Keras, Android</div>
+      <div class="project-desc">CNN-based mobile app to detect plant diseases from images.</div>
+      <a href="https://github.com/ankit/crop-disease-ai" target="_blank">View on GitHub →</a>
+    </div>
+    <div class="project">
+      <div class="project-title">Video Summary & QnA Bot</div>
+      <div class="project-tech">Whisper, Transformers, LangChain</div>
+      <div class="project-desc">Summarize & ask questions on videos using Whisper + LLMs.</div>
+      <a href="https://github.com/ankit/video-summary-bot" target="_blank">View on GitHub →</a>
+    </div>
+    <div class="project">
+      <div class="project-title">Churn Prediction System</div>
+      <div class="project-tech">XGBoost, Streamlit, Scikit-learn</div>
+      <div class="project-desc">Predict customer churn using XGBoost + Streamlit.</div>
+      <a href="https://github.com/ankit/churn-predictor" target="_blank">View on GitHub →</a>
+    </div>
+  </section>
+
+  <section class="blog">
+    <h2>Blog</h2>
+    <div class="post">
+      <div class="post-title">How I Built an AI PDF Chatbot</div>
+      <div class="post-date">April 2025</div>
+      <div class="post-desc">A detailed walkthrough on how I developed an intelligent PDF chatbot using LangChain and OpenAI APIs.</div>
+    </div>
+    <div class="post">
+      <div class="post-title">Deploying ML Models with Streamlit</div>
+      <div class="post-date">March 2025</div>
+      <div class="post-desc">Sharing my experience on how to quickly prototype and deploy ML applications using Streamlit.</div>
+    </div>
+  </section>
+
+  <section class="certificates">
+    <h2>Certificates & Achievements</h2>
+    <ul>
+      <li>Google AI for Everyone Certificate - Coursera</li>
+      <li>Deep Learning Specialization - Andrew Ng</li>
+      <li>Winner - College Hackathon 2024</li>
+      <li>Top 1% in AI Challenge 2025 - HackerRank</li>
+      <li>Certified AI Practitioner - FutureLearn</li>
     </ul>
-</section>
-<!-- Blog Section -->
-<section id="blog" class="blog">
-    <div class="container">
-        <h2>📝 My Blog</h2>
-        <p>Explore my latest blog posts on Machine Learning, AI, and related technologies.</p>
-        
-        <div class="blog-container">
-            <!-- Blog 1 -->
-            <div class="blog-card">
-                <img src="images/blog1.jpg" alt="Machine Learning Basics">
-                <h3>Machine Learning Basics</h3>
-                <p>Get started with Machine Learning by understanding core concepts like supervised and unsupervised learning.</p>
-                <a href="https://medium.com/@ankitgupta/ml-basics" target="_blank" class="btn">Read More</a>
-            </div>
+  </section>
 
-            <!-- Blog 2 -->
-            <div class="blog-card">
-                <img src="images/blog2.jpg" alt="Deep Learning for Beginners">
-                <h3>Deep Learning for Beginners</h3>
-                <p>Learn the fundamentals of deep learning, neural networks, and how to build your first deep learning model.</p>
-                <a href="https://medium.com/@ankitgupta/deep-learning-guide" target="_blank" class="btn">Read More</a>
-            </div>
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>If you're interested in working together, feel free to reach out!</p>
+    <p>Email: <a href="mailto:ankit@example.com">ankit@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/ankit" target="_blank">linkedin.com/in/ankit</a></p>
+    <p>GitHub: <a href="https://github.com/ankit" target="_blank">github.com/ankit</a></p>
+  </section>
 
-            <!-- Blog 3 -->
-            <div class="blog-card">
-                <img src="images/blog3.jpg" alt="AI Trends in 2025">
-                <h3>AI Trends in 2025</h3>
-                <p>Discover the latest trends and advancements in AI that are shaping the future of technology.</p>
-                <a href="https://medium.com/@ankitgupta/ai-trends-2025" target="_blank" class="btn">Read More</a>
-            </div>
-        </div>
-    </div>
-                                                                                                                      </section>
+  <footer>
+    &copy; <span id="year"></span> Ankit | AI Engineer Portfolio
+  </footer>
 
-    <!-- Contact Section -->
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>📬 Contact Me</h2>
-        <p>If you'd like to connect, discuss opportunities, or just have a chat about ML and AI, feel free to reach out to me!</p>
-        
-        <!-- Contact Form -->
-        <form action="submit_form.php" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">💬 Your Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name" class="form-input">
-            </div>
-            
-            <div class="form-group">
-                <label for="email">📧 Your Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email" class="form-input">
-            </div>
-            
-            <div class="form-group">
-                <label for="message">📝 Your Message:</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Enter your message" class="form-input"></textarea>
-            </div>
-            
-            <div class="form-group">
-                <button type="submit" class="btn-submit">Send Message</button>
-            </div>
-        </form>
-
-        <!-- Social Media Links -->
-        <div class="social-media">
-            <p>Or, connect with me directly on:</p>
-            <ul class="social-links">
-                <li><a href="https://linkedin.com/in/ankitgupta2026" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/ankitgupta9569" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://instagram.com/ankitgupta_2026" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-
-    <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
+
