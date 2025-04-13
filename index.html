@@ -184,19 +184,123 @@ body.dark .certificates,
 body.dark .contact {
   background-color: #2d3748;
 }
+<style>
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    body {
+      padding: 1rem;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    .intro-video iframe {
+      width: 100%;
+      max-width: 100%;
+      height: 200px;
+    }
+    .social-links {
+      text-align: center;
+    }
+    .project {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .contact form input, .contact form textarea, .contact form button {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  /* General Styling */
+.contact {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.contact form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact form input,
+  .contact form textarea,
+  .contact form button {
+    font-size: 1rem;
+  }
+}
+
+</style>
 
   </style>
 </head>
 <body>
-  <!-- Add inside <body> as the first element -->
-<nav style="position: sticky; top: 0; background: #ffffff; padding: 1rem; z-index: 1000; border-bottom: 1px solid #e5e7eb; text-align: center;">
-  <a href="#about" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">About</a>
-  <a href="#projects" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Projects</a>
-  <a href="#blog" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Blog</a>
-  <a href="#certificates" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Certificates</a>
-  <a href="#contact" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Contact</a>
-  <button onclick="toggleDarkMode()" style="margin-left: 2rem; background: none; border: none; cursor: pointer; font-size: 1rem;">🌙 Toggle Dark Mode</button>
+<!-- Add this inside your nav for mobile -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<nav id="mobile-nav" style="display: none;">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#blog">Blog</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact</a>
 </nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobile-nav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
 
   <header>
     <h1>Ankit - AI Engineer</h1>
@@ -329,15 +433,20 @@ body.dark .contact {
     });
   });
 </script>
-<form id="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1;">
-  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1;">
-  <textarea name="message" rows="5" placeholder="Your Message" required style="width: 100%; padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1;"></textarea>
-  <button type="submit" style="margin-top: 0.75rem; padding: 0.5rem 1rem; background-color: #1e3a8a; color: white; border: none; border-radius: 0.5rem;">Send Message</button>
-</form>
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/moverbbo" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
 
 </body>
 <footer>
     &copy; <span id="year"></span> Ankit | AI Engineer Portfolio
   </footer>
+
 </html>
