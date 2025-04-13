@@ -171,9 +171,33 @@
       color: #6b7280;
       font-size: 0.9rem;
     }
+    body.dark {
+  background-color: #1a202c;
+  color: #f9fafb;
+}
+body.dark a {
+  color: #93c5fd;
+}
+body.dark .project,
+body.dark .about,
+body.dark .certificates,
+body.dark .contact {
+  background-color: #2d3748;
+}
+
   </style>
 </head>
 <body>
+  <!-- Add inside <body> as the first element -->
+<nav style="position: sticky; top: 0; background: #ffffff; padding: 1rem; z-index: 1000; border-bottom: 1px solid #e5e7eb; text-align: center;">
+  <a href="#about" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">About</a>
+  <a href="#projects" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Projects</a>
+  <a href="#blog" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Blog</a>
+  <a href="#certificates" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Certificates</a>
+  <a href="#contact" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Contact</a>
+  <button onclick="toggleDarkMode()" style="margin-left: 2rem; background: none; border: none; cursor: pointer; font-size: 1rem;">🌙 Toggle Dark Mode</button>
+</nav>
+
   <header>
     <h1>Ankit - AI Engineer</h1>
     <p>Building intelligent solutions for the future | AI, ML, LLMs, CV</p>
@@ -185,13 +209,32 @@
     </div>
     <div class="intro-video">
       <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Ankit Intro Video" allowfullscreen></iframe>
-    </div>
+    </div> 
+    <div style="margin-top: 1.5rem;">
+  <a href="resume.pdf" download style="padding: 0.5rem 1rem; background-color: #1e3a8a; color: white; border-radius: 0.5rem; text-decoration: none;">📄 Download Resume</a>
+</div>
+
   </header>
 
   <section class="about">
     <h2>About Me</h2>
     <p>I’m Ankit, a passionate AI Engineer with hands-on experience in building smart applications using Machine Learning, Deep Learning, and LLMs. I enjoy working on real-world problems and turning ideas into intelligent, impactful solutions. I'm currently open to AI/ML opportunities and collaborations.</p>
   </section>
+<section class="skills" style="max-width: 900px; margin: 3rem auto;">
+  <h2 style="color: #1e3a8a; font-size: 1.5rem; margin-bottom: 1rem;">Skills & Tools</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Python</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">scikit-learn</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">TensorFlow</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">PyTorch</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">LangChain</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">OpenCV</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Streamlit</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">SQL</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Git</span>
+    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Keras</span>
+  </div>
+</section>
 
   <section class="projects">
     <div class="project">
@@ -251,22 +294,50 @@
     </ul>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>If you're interested in working together, feel free to reach out!</p>
-    <p>Email: <a href="mailto:ankit@example.com">ankit@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/ankit" target="_blank">linkedin.com/in/ankit</a></p>
-    <p>GitHub: <a href="https://github.com/ankit" target="_blank">github.com/ankit</a></p>
-  </section>
+<section class="testimonials" style="max-width: 900px; margin: 3rem auto;">
+  <h2 style="color: #1e3a8a; font-size: 1.5rem; margin-bottom: 1rem;">What People Say</h2>
+  <div style="background-color: #f9fafb; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+    <p style="color: #374151;">"Ankit's ability to rapidly prototype ML solutions is impressive. He contributed significantly during our AI hackathon!"</p>
+    <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">— Rajiv Mehta, Mentor @ College Hackathon</p>
+  </div>
+  <div style="background-color: #f9fafb; padding: 1rem; border-radius: 0.5rem;">
+    <p style="color: #374151;">"Very impressed with the AI PDF chatbot project — shows real-world problem-solving and strong grasp of LLMs."</p>
+    <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">— Aditi Sharma, AI Enthusiast</p>
+  </div>
+</section>
 
-  <footer>
-    &copy; <span id="year"></span> Ankit | AI Engineer Portfolio
-  </footer>
+  <button onclick="scrollToTop()" style="position: fixed; bottom: 30px; right: 30px; background-color: #1e3a8a; color: white; border: none; padding: 0.75rem 1rem; border-radius: 999px; cursor: pointer;">↑ Top</button>
+
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Smooth scrolling for nav links
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const section = document.querySelector(this.getAttribute('href'));
+      section.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+<form id="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1;">
+  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1;">
+  <textarea name="message" rows="5" placeholder="Your Message" required style="width: 100%; padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #cbd5e1;"></textarea>
+  <button type="submit" style="margin-top: 0.75rem; padding: 0.5rem 1rem; background-color: #1e3a8a; color: white; border: none; border-radius: 0.5rem;">Send Message</button>
+</form>
+
 </body>
+<footer>
+    &copy; <span id="year"></span> Ankit | AI Engineer Portfolio
+  </footer>
 </html>
-
-
