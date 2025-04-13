@@ -278,6 +278,55 @@ body.dark .contact {
     font-size: 1rem;
   }
 }
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1e3a8a;
+}
+
+/* Mobile Navigation Styles */
+#mobile-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+#mobile-nav a {
+  display: block;
+  padding: 1rem;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+#mobile-nav a:hover {
+  background-color: #f0f4f8;
+}
+
+@media (max-width: 768px) {
+  /* Show the hamburger icon on small screens */
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  /* Hide regular navigation links on small screens */
+  nav {
+    display: none;
+  }
+}
+
 
 </style>
 
@@ -286,12 +335,22 @@ body.dark .contact {
 <body>
 <!-- Add this inside your nav for mobile -->
 <div class="hamburger" onclick="toggleMenu()">☰</div>
-<nav id="mobile-nav" style="display: none;">
+<nav id="mobile-nav">
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
   <a href="#blog">Blog</a>
   <a href="#certificates">Certificates</a>
   <a href="#contact">Contact</a>
+</nav>
+
+<!-- Regular Desktop Navigation (if any) -->
+<nav style="position: sticky; top: 0; background: #ffffff; padding: 1rem; z-index: 1000; border-bottom: 1px solid #e5e7eb; text-align: center;">
+  <a href="#about" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">About</a>
+  <a href="#projects" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Projects</a>
+  <a href="#blog" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Blog</a>
+  <a href="#certificates" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Certificates</a>
+  <a href="#contact" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Contact</a>
+  <button onclick="toggleDarkMode()" style="margin-left: 2rem; background: none; border: none; cursor: pointer; font-size: 1rem;">🌙 Toggle Dark Mode</button>
 </nav>
 
 <script>
