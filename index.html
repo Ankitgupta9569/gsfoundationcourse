@@ -1,511 +1,157 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ankit - AI Engineer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background-color: #ffffff;
-      color: #1a202c;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #1e3a8a;
-      font-weight: bold;
-    }
-    header p {
-      margin-top: 1rem;
-      color: #4b5563;
-    }
-    .social-links {
-      margin-top: 1.5rem;
-    }
-    .social-links a {
-      margin: 0 0.5rem;
-      color: #1e3a8a;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-    .intro-video {
-      display: flex;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .intro-video iframe {
-      width: 100%;
-      max-width: 640px;
-      height: 360px;
-      border: none;
-      border-radius: 0.5rem;
-    }
-    .projects {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .project {
-      border: 1px solid #e5e7eb;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 0.5rem;
-      transition: box-shadow 0.3s;
-      background-color: #f9fafb;
-    }
-    .project:hover {
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-    }
-    .project-title {
-      font-weight: bold;
-      font-size: 1.25rem;
-      color: #1e3a8a;
-    }
-    .project-desc {
-      color: #374151;
-      margin: 0.5rem 0 1rem;
-    }
-    .project-tech {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 0.5rem;
-    }
-    .project a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    .about {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 1rem;
-      background-color: #f1f5f9;
-      border-radius: 0.5rem;
-    }
-    .about h2 {
-      color: #1e3a8a;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .about p {
-      color: #374151;
-      line-height: 1.6;
-    }
-    .blog {
-      max-width: 900px;
-      margin: 3rem auto;
-    }
-    .blog h2 {
-      color: #1e3a8a;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .post {
-      margin-bottom: 1.5rem;
-    }
-    .post-title {
-      font-size: 1.2rem;
-      color: #1e3a8a;
-      font-weight: bold;
-    }
-    .post-date {
-      color: #6b7280;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-    .post-desc {
-      color: #374151;
-    }
-    .certificates {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 1rem;
-      background-color: #f9fafb;
-      border-radius: 0.5rem;
-    }
-    .certificates h2 {
-      color: #1e3a8a;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .certificates ul {
-      list-style: disc;
-      padding-left: 1.5rem;
-      color: #374151;
-    }
-    .certificates li {
-      margin-bottom: 0.5rem;
-    }
-    .contact {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 1rem;
-      background-color: #f1f5f9;
-      border-radius: 0.5rem;
-    }
-    .contact h2 {
-      color: #1e3a8a;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .contact p {
-      color: #374151;
-      margin-bottom: 0.5rem;
-    }
-    .contact a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      color: #6b7280;
-      font-size: 0.9rem;
-    }
-    body.dark {
-  background-color: #1a202c;
-  color: #f9fafb;
-}
-body.dark a {
-  color: #93c5fd;
-}
-body.dark .project,
-body.dark .about,
-body.dark .certificates,
-body.dark .contact {
-  background-color: #2d3748;
-}
-<style>
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    body {
-      padding: 1rem;
-    }
-    header h1 {
-      font-size: 2rem;
-    }
-    .intro-video iframe {
-      width: 100%;
-      max-width: 100%;
-      height: 200px;
-    }
-    .social-links {
-      text-align: center;
-    }
-    .project {
-      padding: 1rem;
-      margin-bottom: 1rem;
-    }
-    .contact form input, .contact form textarea, .contact form button {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-  }
-  /* General Styling */
-.contact {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-.contact h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #333;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact form input,
-.contact form textarea,
-.contact form button {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.contact form input:focus,
-.contact form textarea:focus {
-  border-color: #007BFF;
-  outline: none;
-}
-
-.contact form button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.contact form button:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact {
-    padding: 1rem;
-  }
-
-  .contact h2 {
-    font-size: 1.5rem;
-  }
-
-  .contact form input,
-  .contact form textarea,
-  .contact form button {
-    font-size: 1rem;
-  }
-}
-/* Hamburger Icon */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #1e3a8a;
-}
-
-/* Mobile Navigation Styles */
-#mobile-nav {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  text-align: center;
-  z-index: 1000;
-}
-
-#mobile-nav a {
-  display: block;
-  padding: 1rem;
-  color: #1e3a8a;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-top: 1px solid #e5e7eb;
-}
-
-#mobile-nav a:hover {
-  background-color: #f0f4f8;
-}
-
-@media (max-width: 768px) {
-  /* Show the hamburger icon on small screens */
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-  }
-  
-  /* Hide regular navigation links on small screens */
-  nav {
-    display: none;
-  }
-}
-
-
-</style>
-
-  </style>
 </head>
 <body>
-<!-- Add this inside your nav for mobile -->
-<div class="hamburger" onclick="toggleMenu()">☰</div>
-<nav id="mobile-nav">
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#blog">Blog</a>
-  <a href="#certificates">Certificates</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<!-- Regular Desktop Navigation (if any) -->
-<nav style="position: sticky; top: 0; background: #ffffff; padding: 1rem; z-index: 1000; border-bottom: 1px solid #e5e7eb; text-align: center;">
-  <a href="#about" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">About</a>
-  <a href="#projects" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Projects</a>
-  <a href="#blog" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Blog</a>
-  <a href="#certificates" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Certificates</a>
-  <a href="#contact" style="margin: 0 1rem; text-decoration: none; color: #1e3a8a;">Contact</a>
-  <button onclick="toggleDarkMode()" style="margin-left: 2rem; background: none; border: none; cursor: pointer; font-size: 1rem;">🌙 Toggle Dark Mode</button>
-</nav>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('mobile-nav');
-    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
-
-
   <header>
-    <h1>Ankit - AI Engineer</h1>
-    <p>Building intelligent solutions for the future | AI, ML, LLMs, CV</p>
-    <div class="social-links">
-      <a href="mailto:ankitguptaa2026@gmail.com">📧</a>
-      <a href="https://github.com/ankitgupta9569" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/ankitgupta2026" target="_blank">LinkedIn</a>
-      <a href="https://medium.com/@ankitgupta2026" target="_blank">Medium</a>
-    </div>
-    <div class="intro-video">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Ankit Intro Video" allowfullscreen></iframe>
-    </div> 
-    <div style="margin-top: 1.5rem;">
-  <a href="resume.pdf" download style="padding: 0.5rem 1rem; background-color: #1e3a8a; color: white; border-radius: 0.5rem; text-decoration: none;">📄 Download Resume</a>
-</div>
-
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+       
+      </ul>
+      <button id="toggleTheme">🌙</button>
+    </nav>
   </header>
 
-  <section class="about">
+  <section id="home" class="fade-in">
+    <h2>Welcome!</h2>
+    <p>I’m Ankit – an aspiring AI/ML Engineer passionate about building tech products.</p>
+    <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+
+  </section>
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>I’m Ankit, a passionate AI Engineer with hands-on experience in building smart applications using Machine Learning, Deep Learning, and LLMs. I enjoy working on real-world problems and turning ideas into intelligent, impactful solutions. I'm currently open to AI/ML opportunities and collaborations.</p>
-  </section>
-<section class="skills" style="max-width: 900px; margin: 3rem auto;">
-  <h2 style="color: #1e3a8a; font-size: 1.5rem; margin-bottom: 1rem;">Skills & Tools</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Python</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">scikit-learn</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">TensorFlow</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">PyTorch</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">LangChain</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">OpenCV</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Streamlit</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">SQL</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Git</span>
-    <span style="background-color: #e0f2fe; padding: 0.4rem 0.75rem; border-radius: 999px;">Keras</span>
-  </div>
-</section>
-
-  <section class="projects">
-    <div class="project">
-      <div class="project-title">AI PDF Chatbot</div>
-      <div class="project-tech">LangChain, OpenAI, ChromaDB</div>
-      <div class="project-desc">Chat with any PDF using LangChain, OpenAI & ChromaDB.</div>
-      <a href="https://github.com/ankit/ai-pdf-chatbot" target="_blank">View on GitHub →</a>
-    </div>
-    <div class="project">
-      <div class="project-title">Face Recognition Attendance System</div>
-      <div class="project-tech">OpenCV, Python, FaceNet</div>
-      <div class="project-desc">Real-time face detection and attendance logging with OpenCV.</div>
-      <a href="https://github.com/ankit/face-attendance" target="_blank">View on GitHub →</a>
-    </div>
-    <div class="project">
-      <div class="project-title">Crop Disease Detector</div>
-      <div class="project-tech">CNN, Keras, Android</div>
-      <div class="project-desc">CNN-based mobile app to detect plant diseases from images.</div>
-      <a href="https://github.com/ankit/crop-disease-ai" target="_blank">View on GitHub →</a>
-    </div>
-    <div class="project">
-      <div class="project-title">Video Summary & QnA Bot</div>
-      <div class="project-tech">Whisper, Transformers, LangChain</div>
-      <div class="project-desc">Summarize & ask questions on videos using Whisper + LLMs.</div>
-      <a href="https://github.com/ankit/video-summary-bot" target="_blank">View on GitHub →</a>
-    </div>
-    <div class="project">
-      <div class="project-title">Churn Prediction System</div>
-      <div class="project-tech">XGBoost, Streamlit, Scikit-learn</div>
-      <div class="project-desc">Predict customer churn using XGBoost + Streamlit.</div>
-      <a href="https://github.com/ankit/churn-predictor" target="_blank">View on GitHub →</a>
-    </div>
+    <p>I'm a passionate Machine Learning enthusiast currently in my 6th semester of B.Tech in Computer Science. With 10+ machine learning projects under my belt—including a Credit Card Fraud Detection System and a Movie Recommender System—I focus on building real-world solutions using data.
+        I’m skilled in Python, scikit-learn, pandas, NumPy, TensorFlow, and PyTorch, and have hands-on experience with SQL, Git, and data visualization. I enjoy developing ML models from scratch, tuning them for performance, and translating insights into impact.
+        A quick learner by nature, I thrive on exploring new technologies through Kaggle challenges, GitHub projects, and online courses. I'm always seeking opportunities to grow and apply my skills in real-world scenarios.
+        Currently, I’m open to internship opportunities in machine learning or data science—ready to contribute, learn, and be mentored by industry professionals.
+        </p>
   </section>
 
-  <section class="blog">
-    <h2>Blog</h2>
-    <div class="post">
-      <div class="post-title">How I Built an AI PDF Chatbot</div>
-      <div class="post-date">April 2025</div>
-      <div class="post-desc">A detailed walkthrough on how I developed an intelligent PDF chatbot using LangChain and OpenAI APIs.</div>
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+  
+    <div class="skill-bar">
+      <p>Python</p>
+      <div class="bar"><div style="width: 90%;">90%</div></div>
     </div>
-    <div class="post">
-      <div class="post-title">Deploying ML Models with Streamlit</div>
-      <div class="post-date">March 2025</div>
-      <div class="post-desc">Sharing my experience on how to quickly prototype and deploy ML applications using Streamlit.</div>
+  
+    <div class="skill-bar">
+      <p>Machine Learning</p>
+      <div class="bar"><div style="width: 85%;">85%</div></div>
     </div>
+  
+    <div class="skill-bar">
+      <p>Deep Learning</p>
+      <div class="bar"><div style="width: 80%;">80%</div></div>
+    </div>
+  
+    <div class="skill-bar">
+      <p>TensorFlow / PyTorch</p>
+      <div class="bar"><div style="width: 75%;">75%</div></div>
+    </div>
+  
+    <div class="skill-bar">
+      <p>SQL</p>
+      <div class="bar"><div style="width: 70%;">70%</div></div>
+    </div>
+  
+    <div class="skill-bar">
+      <p>HTML / CSS / JavaScript</p>
+      <div class="bar"><div style="width: 85%;">85%</div></div>
+    </div>
+  
   </section>
 
-  <section class="certificates">
-    <h2>Certificates & Achievements</h2>
-    <ul>
-      <li>Google AI for Everyone Certificate - Coursera</li>
-      <li>Deep Learning Specialization - Andrew Ng</li>
-      <li>Winner - College Hackathon 2024</li>
-      <li>Top 1% in AI Challenge 2025 - HackerRank</li>
-      <li>Certified AI Practitioner - FutureLearn</li>
-    </ul>
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>House Price Prediction</h3>
+        <p>ML model to detect fraudulent transactions using anomaly detection.</p>
+        <div class="card-links">
+          <a href="https://github.com/Ankitgupta9569/House-Price-Prediction" target="_blank">GitHub</a>
+          <a href="https://your-live-link.com" target="_blank">Live</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <h3>Movie Recommendation System</h3>
+        <p>Content-based recommender using NLP and cosine similarity.</p>
+        <div class="card-links">
+          <a href="https://github.com/Ankitgupta9569/project-4-Movie-Recommendation-System-" target="_blank">GitHub</a>
+          <a href="https://your-live-link.com" target="_blank">Live</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <h3>SmartTestify Platform</h3>
+        <p>Progressing.</p>
+        <div class="card-links">
+          <a href="https://github.com/yourusername/smarttestify" target="_blank">GitHub</a>
+          <a href="https://smarttestify.live" target="_blank">Live</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="certificates" class="fade-in">
+    <h2>Certificates</h2>
+    <div class="certificate-grid">
+      <div class="certificate-card">
+        <h3>Build Your First AI Agent Using Agentforce</h3>
+        <p>Issued by GeeksforGeeks</p>
+        <a href="https://coursera.org/verify/your-cert-id" target="_blank">View Certificate</a>
+      </div>
+      <div class="certificate-card">
+        <h3>AI Workshop /h3>
+        <p>Issued by Ducat Education</p>
+        <a href="https://coursera.org/verify/your-cert-id" target="_blank">View Certificate</a>
+      </div>
+      <div class="certificate-card">
+        <h3> Data Visualization with Python! 📊</h3>
+        <p>Issued by WS Cbe Tech</p>
+        <a href="https://codingninjas.com/certificate/your-id" target="_blank">View Certificate</a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/moverbbo" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    <p id="message"></p>
   </section>
 
-<section class="testimonials" style="max-width: 900px; margin: 3rem auto;">
-  <h2 style="color: #1e3a8a; font-size: 1.5rem; margin-bottom: 1rem;">What People Say</h2>
-  <div style="background-color: #f9fafb; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
-    <p style="color: #374151;">"Ankit's ability to rapidly prototype ML solutions is impressive. He contributed significantly during our AI hackathon!"</p>
-    <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">— Rajiv Mehta, Mentor @ College Hackathon</p>
-  </div>
-  <div style="background-color: #f9fafb; padding: 1rem; border-radius: 0.5rem;">
-    <p style="color: #374151;">"Very impressed with the AI PDF chatbot project — shows real-world problem-solving and strong grasp of LLMs."</p>
-    <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem;">— Aditi Sharma, AI Enthusiast</p>
-  </div>
-</section>
-
-  <button onclick="scrollToTop()" style="position: fixed; bottom: 30px; right: 30px; background-color: #1e3a8a; color: white; border: none; padding: 0.75rem 1rem; border-radius: 999px; cursor: pointer;">↑ Top</button>
-
-
-  <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark');
-  }
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // Smooth scrolling for nav links
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const section = document.querySelector(this.getAttribute('href'));
-      section.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-</script>
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/moverbbo" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-
-</body>
-<footer>
-    &copy; <span id="year"></span> Ankit | AI Engineer Portfolio
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/ankitgupta9569" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ankitgupta2026/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/ankitgupta2026" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:ankitguptaa2026@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© 2025 Ankit Gupta. All rights reserved.</p>
   </footer>
+  
+  
 
+  <script src="script.js"></script>
+</body>
 </html>
+
