@@ -1,157 +1,262 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Ankit Gupta – AI Engineer Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background: #1e293b;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #334155;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #facc15;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .center {
+      text-align: center;
+    }
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #38bdf8;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      color: #38bdf8;
+    }
+    .subtext {
+      color: #facc15;
+    }
+    .cta a {
+      margin: 0.5rem;
+      padding: 0.6rem 1.4rem;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    h2 {
+      color: #38bdf8;
+    }
+    .tech-stack img {
+      width: 60px;
+      margin: 0.5rem;
+    }
+    .project-card {
+  background: #1e293b;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.3);
+}
+.project-card h3 {
+  color: #facc15;
+  margin-bottom: 0.5rem;
+}
+.project-card p {
+  margin: 0.3rem 0;
+}
+.project-card a {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+.project-card a:hover {
+  color: #facc15;
+}
 
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      margin-top: 1rem;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 6px;
+      background: #1e293b;
+      color: #f8fafc;
+    }
+    .contact button {
+      padding: 0.7rem 1.5rem;
+      background: #facc15;
+      color: #0f172a;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+   .footer {
+  background: #1e293b;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+}
+.footer a {
+  color: #38bdf8;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.footer a:hover {
+  color: #facc15;
+}
+.footer .social-links {
+  margin-bottom: 0.5rem;
+}
+
+  </style>
 </head>
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-       
-      </ul>
-      <button id="toggleTheme">🌙</button>
-    </nav>
-  </header>
 
-  <section id="home" class="fade-in">
-    <h2>Welcome!</h2>
-    <p>I’m Ankit – an aspiring AI/ML Engineer passionate about building tech products.</p>
-    <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#tech">Tech</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  </section>
-  <section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p>I'm a passionate Machine Learning enthusiast currently in my 6th semester of B.Tech in Computer Science. With 10+ machine learning projects under my belt—including a Credit Card Fraud Detection System and a Movie Recommender System—I focus on building real-world solutions using data.
-        I’m skilled in Python, scikit-learn, pandas, NumPy, TensorFlow, and PyTorch, and have hands-on experience with SQL, Git, and data visualization. I enjoy developing ML models from scratch, tuning them for performance, and translating insights into impact.
-        A quick learner by nature, I thrive on exploring new technologies through Kaggle challenges, GitHub projects, and online courses. I'm always seeking opportunities to grow and apply my skills in real-world scenarios.
-        Currently, I’m open to internship opportunities in machine learning or data science—ready to contribute, learn, and be mentored by industry professionals.
-        </p>
+  <!-- Home -->
+  <section id="home" class="hero center">
+    <img src="profile.jpg" alt="Ankit Gupta"/>
+    <h1>Ankit Gupta – AI Engineer</h1>
+    <p class="subtext">AI Engineer building real-world LLM & GenAI tools using LangChain, Hugging Face, and FastAPI.</p>
+    <div class="cta">
+      <a href="#projects">View Projects</a>
+      <a href="#resume">Download Resume</a>
+    </div>
   </section>
 
-  <section id="skills" class="fade-in">
-    <h2>Skills</h2>
-  
-    <div class="skill-bar">
-      <p>Python</p>
-      <div class="bar"><div style="width: 90%;">90%</div></div>
+  <!-- About -->
+  <section id="about">
+    <h2>🧠 About Me</h2>
+    <p>I started my AI journey through a 90-Day Comeback Plan where I built real projects in LLMs, Vision, and GenAI. I’ve developed domain-specific chatbots, resume analyzers, and real-world NLP tools for India-first problems.</p>
+    <p>I’ve mastered tools like LangChain, OpenAI APIs, Hugging Face Transformers, ChromaDB, Streamlit, and FastAPI.</p>
+    <p>Fun fact: I love contributing to open source, hackathons, and collaborating with mentors to grow.</p>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="tech" class="center">
+    <h2>⚙️ Tech Stack</h2>
+    <div class="tech-stack">
+      <img src="logos/python.png" alt="Python"/>
+      <img src="logos/pytorch.png" alt="PyTorch"/>
+      <img src="logos/langchain.png" alt="LangChain"/>
+      <img src="logos/huggingface.png" alt="Hugging Face"/>
+      <img src="logos/streamlit.png" alt="Streamlit"/>
+      <img src="logos/fastapi.png" alt="FastAPI"/>
     </div>
-  
-    <div class="skill-bar">
-      <p>Machine Learning</p>
-      <div class="bar"><div style="width: 85%;">85%</div></div>
-    </div>
-  
-    <div class="skill-bar">
-      <p>Deep Learning</p>
-      <div class="bar"><div style="width: 80%;">80%</div></div>
-    </div>
-  
-    <div class="skill-bar">
-      <p>TensorFlow / PyTorch</p>
-      <div class="bar"><div style="width: 75%;">75%</div></div>
-    </div>
-  
-    <div class="skill-bar">
-      <p>SQL</p>
-      <div class="bar"><div style="width: 70%;">70%</div></div>
-    </div>
-  
-    <div class="skill-bar">
-      <p>HTML / CSS / JavaScript</p>
-      <div class="bar"><div style="width: 85%;">85%</div></div>
-    </div>
+  </section>
+
+ <section id="projects">
+  <h2>🚀 Projects</h2>
+
+  <div class="project-card">
+    <h3>📰 Fake News Detection</h3>
+    <p><strong>Role:</strong> ML Developer</p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/fake-news-detector" target="_blank">View Code</a></p>
+    <p><strong>Live Demo:</strong> <a href="https://fake-news.streamlit.app/" target="_blank">Try Now</a></p>
+    <p><strong>Tech Stack:</strong> BERT, Python, Streamlit, Scikit-learn</p>
+    <p><strong>Summary:</strong> Classifies real vs fake news using BERT trained on Indian media. Achieved 96% accuracy. Deployed on Streamlit.</p>
+  </div>
+
+  <div class="project-card">
+    <h3>📄 Resume Analyzer GPT</h3>
+    <p><strong>Role:</strong> AI + Backend Developer</p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/resume-analyzer-gpt" target="_blank">View Code</a></p>
+    <p><strong>Live Demo:</strong> <a href="https://resume-gpt.hf.space/" target="_blank">Try Now</a></p>
+    <p><strong>Tech Stack:</strong> LangChain, OpenAI, Streamlit, ChromaDB</p>
+    <p><strong>Summary:</strong> Upload a resume and job description to receive GPT feedback with match percentage. Built with LangChain + Streamlit.</p>
+  </div>
+
+  <div class="project-card">
+    <h3>💬 Legal Chatbot for PDFs</h3>
+    <p><strong>Role:</strong> LLM Engineer</p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/legal-chatbot" target="_blank">View Code</a></p>
+    <p><strong>Live Demo:</strong> <a href="https://legal-chatbot.streamlit.app/" target="_blank">Try Now</a></p>
+    <p><strong>Tech Stack:</strong> LangChain, FAISS, OpenAI, PDF Loader</p>
+    <p><strong>Summary:</strong> A chatbot that answers questions from uploaded Indian legal PDFs using OpenAI + LangChain.</p>
+  </div>
+</section>
+
+
+  <!-- Resume -->
+  <section id="resume" class="center">
+    <h2>📜 Resume</h2>
+    <a href="resume.pdf" download class="cta">📥 Download Resume (PDF)</a>
+    <iframe src="resume.pdf"></iframe>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
+    <h2>📚 Blog Posts</h2>
+    <ul>
+      <li>📌 <strong>How I Built a Resume Analyzer using GPT</strong></li>
+      <li>📌 <strong>LangChain vs Haystack: My Experience</strong></li>
+      <li>📌 <strong>Lessons from 90 Days of Building with LLMs</strong></li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>📩 Contact Me</h2>
+    <form class="contact">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>📧 ankit.ai@example.com | 📞 +91 9876543210</p>
   
   </section>
 
-  <section id="projects" class="fade-in">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="card">
-        <h3>House Price Prediction</h3>
-        <p>ML model to detect fraudulent transactions using anomaly detection.</p>
-        <div class="card-links">
-          <a href="https://github.com/Ankitgupta9569/House-Price-Prediction" target="_blank">GitHub</a>
-          <a href="https://your-live-link.com" target="_blank">Live</a>
-        </div>
-      </div>
-  
-      <div class="card">
-        <h3>Movie Recommendation System</h3>
-        <p>Content-based recommender using NLP and cosine similarity.</p>
-        <div class="card-links">
-          <a href="https://github.com/Ankitgupta9569/project-4-Movie-Recommendation-System-" target="_blank">GitHub</a>
-          <a href="https://your-live-link.com" target="_blank">Live</a>
-        </div>
-      </div>
-  
-      <div class="card">
-        <h3>SmartTestify Platform</h3>
-        <p>Progressing.</p>
-        <div class="card-links">
-          <a href="https://github.com/yourusername/smarttestify" target="_blank">GitHub</a>
-          <a href="https://smarttestify.live" target="_blank">Live</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="certificates" class="fade-in">
-    <h2>Certificates</h2>
-    <div class="certificate-grid">
-      <div class="certificate-card">
-        <h3>Build Your First AI Agent Using Agentforce</h3>
-        <p>Issued by GeeksforGeeks</p>
-        <a href="https://coursera.org/verify/your-cert-id" target="_blank">View Certificate</a>
-      </div>
-      <div class="certificate-card">
-        <h3>AI Workshop /h3>
-        <p>Issued by Ducat Education</p>
-        <a href="https://coursera.org/verify/your-cert-id" target="_blank">View Certificate</a>
-      </div>
-      <div class="certificate-card">
-        <h3> Data Visualization with Python! 📊</h3>
-        <p>Issued by WS Cbe Tech</p>
-        <a href="https://codingninjas.com/certificate/your-id" target="_blank">View Certificate</a>
-      </div>
-    </div>
-  </section>
-  
-  
-  <section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/moverbbo" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    <p id="message"></p>
-  </section>
+  <footer class="footer">
+  <div class="social-links">
+    <a href="https://github.com/ankitgupta" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/ankitgupta2026" target="_blank">LinkedIn</a> |
+    <a href="https://twitter.com/ankitai" target="_blank">Twitter</a>
+  </div>
+  <p>Built with 💻 by Ankit Gupta | AI Engineer | 2025</p>
+</footer>
 
-  <footer>
-    <div class="social-links">
-      <a href="https://github.com/ankitgupta9569" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ankitgupta2026/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://twitter.com/ankitgupta2026" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="mailto:ankitguptaa2026@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-    <p>© 2025 Ankit Gupta. All rights reserved.</p>
-  </footer>
-  
-  
 
-  <script src="script.js"></script>
 </body>
 </html>
-
