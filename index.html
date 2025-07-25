@@ -3,260 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ankit Gupta – AI Engineer Portfolio</title>
+  <title>Explore eBooks – AKG Study Group</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
     }
-    nav {
-      background: #1e293b;
-      padding: 1rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #334155;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: #f1f5f9;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #facc15;
-    }
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .center {
+    header {
+      background-color: #2b2b6d;
+      color: #fff;
+      padding: 20px;
       text-align: center;
     }
-    .hero img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #38bdf8;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-    .hero h1 {
-      color: #38bdf8;
-    }
-    .subtext {
-      color: #facc15;
-    }
-    .cta a {
-      margin: 0.5rem;
-      padding: 0.6rem 1.4rem;
-      background: #38bdf8;
-      color: #0f172a;
-      text-decoration: none;
-      border-radius: 8px;
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      background: #ffe600;
+      color: #111;
       font-weight: bold;
+      padding: 10px;
+    }
+    .marquee span {
       display: inline-block;
+      padding-left: 100%;
+      animation: move 15s linear infinite;
     }
-    h2 {
-      color: #38bdf8;
+    @keyframes move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
-    .tech-stack img {
-      width: 60px;
-      margin: 0.5rem;
+    .banner {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
     }
-    .project-card {
-  background: #1e293b;
-  padding: 1.5rem;
-  margin: 1.2rem 0;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 18px rgba(250, 204, 21, 0.3);
-}
-.project-card h3 {
-  color: #facc15;
-  margin-bottom: 0.5rem;
-}
-.project-card p {
-  margin: 0.3rem 0;
-}
-.project-card a {
-  color: #38bdf8;
-  text-decoration: underline;
-}
-.project-card a:hover {
-  color: #facc15;
-}
-
-    iframe {
+    .card {
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+    .card img {
       width: 100%;
-      height: 480px;
-      border: none;
-      margin-top: 1rem;
+      height: 200px;
+      object-fit: cover;
     }
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin: 0.5rem 0;
-      border: none;
-      border-radius: 6px;
-      background: #1e293b;
-      color: #f8fafc;
+    .timer {
+      background: #ff0066;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
     }
-    .contact button {
-      padding: 0.7rem 1.5rem;
-      background: #facc15;
-      color: #0f172a;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
+    .buy-btn {
+      background: #2b2b6d;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 5px;
     }
-   .footer {
-  background: #1e293b;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.95rem;
-  border-top: 1px solid #334155;
-  color: #94a3b8;
-}
-.footer a {
-  color: #38bdf8;
-  font-weight: 500;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-.footer a:hover {
-  color: #facc15;
-}
-.footer .social-links {
-  margin-bottom: 0.5rem;
-}
-
+    .social, .contact-form {
+      padding: 20px;
+      text-align: center;
+    }
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #2b2b6d;
+    }
+    input, textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background: #2b2b6d;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#tech">Tech</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+  <h1>📚 Explore AKG STUDY GROUP eBooks</h1>
+</header>
 
-  <!-- Home -->
-  <section id="home" class="hero center">
-    <img src="profile.jpg" alt="Ankit Gupta"/>
-    <h1>Ankit Gupta – AI Engineer</h1>
-    <p class="subtext">AI Engineer building real-world LLM & GenAI tools using LangChain, Hugging Face, and FastAPI.</p>
-    <div class="cta">
-      <a href="#projects">View Projects</a>
-      <a href="#resume">Download Resume</a>
-    </div>
-  </section>
+<div class="marquee"><span>🎉 Hurry! Limited Time Offer – Buy Now and Boost Your Preparation 🔥</span></div>
 
-  <!-- About -->
-  <section id="about">
-    <h2>🧠 About Me</h2>
-    <p>I started my AI journey through a 90-Day Comeback Plan where I built real projects in LLMs, Vision, and GenAI. I’ve developed domain-specific chatbots, resume analyzers, and real-world NLP tools for India-first problems.</p>
-    <p>I’ve mastered tools like LangChain, OpenAI APIs, Hugging Face Transformers, ChromaDB, Streamlit, and FastAPI.</p>
-    <p>Fun fact: I love contributing to open source, hackathons, and collaborating with mentors to grow.</p>
-  </section>
+<div class="timer" id="countdown">⏳ Offer ends in: 00d 00h 00m 00s</div>
 
-  <!-- Tech Stack -->
-  <section id="tech" class="center">
-    <h2>⚙️ Tech Stack</h2>
-    <div class="tech-stack">
-      <img src="logos/python.png" alt="Python"/>
-      <img src="logos/pytorch.png" alt="PyTorch"/>
-      <img src="logos/langchain.png" alt="LangChain"/>
-      <img src="logos/huggingface.png" alt="Hugging Face"/>
-      <img src="logos/streamlit.png" alt="Streamlit"/>
-      <img src="logos/fastapi.png" alt="FastAPI"/>
-    </div>
-  </section>
-
- <section id="projects">
-  <h2>🚀 Projects</h2>
-
-  <div class="project-card">
-    <h3>📰 Fake News Detection</h3>
-    <p><strong>Role:</strong> ML Developer</p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/fake-news-detector" target="_blank">View Code</a></p>
-    <p><strong>Live Demo:</strong> <a href="https://fake-news.streamlit.app/" target="_blank">Try Now</a></p>
-    <p><strong>Tech Stack:</strong> BERT, Python, Streamlit, Scikit-learn</p>
-    <p><strong>Summary:</strong> Classifies real vs fake news using BERT trained on Indian media. Achieved 96% accuracy. Deployed on Streamlit.</p>
+<div class="banner">
+  <div class="card">
+    <img src="english-ebook.jpg" alt="English Bundle">
+    <h3>English Mastery Bundle</h3>
+    <p>15+ Books: Grammar, Vocabulary, Speaking & More</p>
+    <a href="https://pages.razorpay.com/pl_QbcEmkrBP52MOE/view#view-1" class="buy-btn">Buy @ ₹99</a>
   </div>
-
-  <div class="project-card">
-    <h3>📄 Resume Analyzer GPT</h3>
-    <p><strong>Role:</strong> AI + Backend Developer</p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/resume-analyzer-gpt" target="_blank">View Code</a></p>
-    <p><strong>Live Demo:</strong> <a href="https://resume-gpt.hf.space/" target="_blank">Try Now</a></p>
-    <p><strong>Tech Stack:</strong> LangChain, OpenAI, Streamlit, ChromaDB</p>
-    <p><strong>Summary:</strong> Upload a resume and job description to receive GPT feedback with match percentage. Built with LangChain + Streamlit.</p>
+  <div class="card">
+    <img src="gk-ebook.jpg" alt="GK Ebook">
+    <h3>5000+ GK Questions eBook</h3>
+    <p>All Govt Exam Static + Current GK in Hindi</p>
+    <a href="https://pages.razorpay.com/pl_QbcEmkrBP52MOE/view#view-1" class="buy-btn">Buy @ ₹50</a>
   </div>
+</div>
 
-  <div class="project-card">
-    <h3>💬 Legal Chatbot for PDFs</h3>
-    <p><strong>Role:</strong> LLM Engineer</p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/legal-chatbot" target="_blank">View Code</a></p>
-    <p><strong>Live Demo:</strong> <a href="https://legal-chatbot.streamlit.app/" target="_blank">Try Now</a></p>
-    <p><strong>Tech Stack:</strong> LangChain, FAISS, OpenAI, PDF Loader</p>
-    <p><strong>Summary:</strong> A chatbot that answers questions from uploaded Indian legal PDFs using OpenAI + LangChain.</p>
-  </div>
+<section class="social">
+  <h2>📱 Follow Us</h2>
+  <a href="https://www.instagram.com/akgstudygroup" target="_blank">📷 Instagram</a>
+  <a href="https://www.threads.net/@akgstudygroup" target="_blank">💬 Threads</a>
+  <a href="mailto:akgstudygroup@gmail.com">📩 Email</a>
 </section>
 
+<section class="contact-form">
+  <h2>📬 Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required /><br />
+    <input type="email" placeholder="Your Email" required /><br />
+    <textarea rows="4" placeholder="Your Message" required></textarea><br />
+    <button type="submit">Send</button>
+  </form>
+</section>
 
-  <!-- Resume -->
-  <section id="resume" class="center">
-    <h2>📜 Resume</h2>
-    <a href="resume.pdf" download class="cta">📥 Download Resume (PDF)</a>
-    <iframe src="Ankit_Gupta_ML.pdf"></iframe>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog">
-    <h2>📚 Blog Posts</h2>
-    <ul>
-      <li>📌 <strong>How I Built a Resume Analyzer using GPT</strong></li>
-      <li>📌 <strong>LangChain vs Haystack: My Experience</strong></li>
-      <li>📌 <strong>Lessons from 90 Days of Building with LLMs</strong></li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>📩 Contact Me</h2>
-    <form class="contact">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>📧 ankitguptaa2026@gmail.com | 📞 +91 9569869194</p>
-  
-  </section>
-
-  <footer class="footer">
-  <div class="social-links">
-    <a href="https://github.com/ankitgupta9569" target="_blank">GitHub</a> |
-    <a href="https://linkedin.com/in/ankitgupta2026" target="_blank">LinkedIn</a> |
-    <a href="https://twitter.com/ankitagupta2026" target="_blank">Twitter</a>
-  </div>
-  <p>Built with 💻 by Ankit Gupta | AI Engineer | 2025</p>
-</footer>
-
+<script>
+  // Countdown Timer
+  const countdown = document.getElementById("countdown");
+  const targetDate = new Date("July 31, 2025 23:59:59").getTime();
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+    countdown.textContent = `⏳ Offer ends in: ${d}d ${h}h ${m}m ${s}s`;
+  }, 1000);
+</script>
 
 </body>
 </html>
