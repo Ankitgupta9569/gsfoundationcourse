@@ -1,157 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AKG STUDY GROUP – eBook Bundle Offers</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <title>GS Foundation Course – Daily Notes | AKG Study Group</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
+      padding: 0;
+      background: #f5f5f5;
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #0057e7, #00c6ff);
+      background: linear-gradient(135deg, #1f4e79, #3f87a6);
       color: white;
+      padding: 30px 20px;
       text-align: center;
-      padding: 30px 10px;
-      animation: slideDown 1s ease-out;
+      animation: fadeInDown 1s ease-out;
     }
-    @keyframes slideDown {
-      from { transform: translateY(-100px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
     }
-    .banner-scroll {
-      background: #ffe600;
-      color: #000;
-      font-weight: bold;
-      padding: 10px;
-      text-align: center;
-      white-space: nowrap;
-      overflow: hidden;
+    header p {
+      font-size: 16px;
+      margin: 0;
     }
-    .banner-scroll span {
-      display: inline-block;
-      animation: scrollText 15s linear infinite;
-    }
-    @keyframes scrollText {
-      from { transform: translateX(100%); }
-      to { transform: translateX(-100%); }
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-    .bundle {
+    .notes-container {
+      max-width: 800px;
+      margin: 30px auto;
       background: white;
-      margin: 30px 0;
-      padding: 20px;
+      padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
     }
-    .bundle:hover {
-      transform: scale(1.02);
+    .day {
+      margin-bottom: 20px;
     }
-    .bundle h2 {
-      color: #0057e7;
+    .day h3 {
+      background: #eaf2ff;
+      padding: 12px;
+      margin: 0 0 10px;
+      border-left: 5px solid #1f4e79;
+      font-size: 18px;
     }
-    .buy-btn {
+    .day a {
       display: inline-block;
-      background: #ff5c5c;
-      color: white;
-      padding: 12px 25px;
       text-decoration: none;
+      background: #1f4e79;
+      color: white;
+      padding: 10px 18px;
       border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s ease;
+      transition: 0.3s;
     }
-    .buy-btn:hover {
-      background: #e13d3d;
+    .day a:hover {
+      background: #163b5a;
     }
-    footer {
-      background: #222;
-      color: #ccc;
-      padding: 20px;
+
+    .coupon-box {
+      margin: 20px 0;
+      padding: 15px;
+      background: #fff9e6;
+      border: 1px dashed #ffa500;
       text-align: center;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #1f4e79;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
     .social-icons a {
       color: white;
       margin: 0 10px;
-      font-size: 18px;
-      transition: transform 0.2s;
+      font-size: 20px;
+      text-decoration: none;
     }
-    .social-icons a:hover {
-      transform: scale(1.3);
-      color: #00c6ff;
-    }
+
     .contact-form {
-      margin-top: 20px;
+      margin-top: 30px;
+      padding: 20px;
+      background: #f8f8f8;
+      border-radius: 8px;
+    }
+    .contact-form h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     .contact-form input, .contact-form textarea {
-      width: 100%;
       padding: 10px;
-      margin: 6px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
+      font-size: 16px;
     }
     .contact-form button {
-      background: #0057e7;
+      background: #1f4e79;
       color: white;
+      padding: 10px;
+      font-size: 16px;
       border: none;
-      padding: 10px 20px;
       border-radius: 6px;
       cursor: pointer;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>📘 AKG STUDY GROUP</h1>
-  <p>India’s Best eBook Bundles for GK & English Mastery</p>
+  <h1>🎓 Welcome to GS Foundation Course</h1>
+  <p>Day-wise Notes & PDFs by AKG Study Group</p>
 </header>
 
-<div class="banner-scroll">
-  <span>🔥 Limited Time Offer! Get English + GK eBooks for just ₹69 & ₹50. Grab Now! 🔥</span>
-</div>
+<div class="notes-container">
 
-<div class="container">
-  <div class="bundle">
-    <h2>🧠 5000+ GK Questions eBook (PDF)</h2>
-    <p>Perfect for SSC, UPSC, Railways & all Government Exams – One-liner + Topicwise Format</p>
-    <a href="https://rzp.io/rzp/5000asgebook" class="buy-btn" target="_blank">Buy Now ₹50</a>
+  <div class="coupon-box">
+    🎁 Use Coupon Code <strong>AKG99</strong> to get Free PDF Access on Day 1-5. Limited Time Offer!
   </div>
 
-  <div class="bundle">
-    <h2>📚 English Mastery eBook Bundle (15+ PDFs)</h2>
-    <p>From Tenses, Verbs, Idioms to Fluency Boost – Hindi + English Mix, All-in-One Pack</p>
-    <a href="https://rzp.io/rzp/uNDhvhe" class="buy-btn" target="_blank">Buy Now ₹69</a>
+  <div class="day">
+    <h3>📘 Day 1 – आधुनिक भारत का इतिहास</h3>
+    <a href="https://yourdomain.com/pdfs/day1.pdf" target="_blank">Download PDF</a>
+  </div>
+
+  <div class="day">
+    <h3>📘 Day 2 – भारतीय भूगोल</h3>
+    <a href="https://yourdomain.com/pdfs/day2.pdf" target="_blank">Download PDF</a>
+  </div>
+
+  <div class="day">
+    <h3>📘 Day 3 – भारतीय संविधान</h3>
+    <a href="https://yourdomain.com/pdfs/day3.pdf" target="_blank">Download PDF</a>
+  </div>
+
+  <div class="day">
+    <h3>📘 Day 4 – विज्ञान</h3>
+    <a href="https://yourdomain.com/pdfs/day4.pdf" target="_blank">Download PDF</a>
+  </div>
+
+  <div class="day">
+    <h3>📘 Day 5 – अर्थव्यवस्था</h3>
+    <a href="https://yourdomain.com/pdfs/day5.pdf" target="_blank">Download PDF</a>
+  </div>
+
+  <!-- Add more days as needed -->
+
+  <div class="contact-form">
+    <h3>📩 संपर्क करें</h3>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="आपका नाम" required>
+      <input type="email" name="email" placeholder="ईमेल" required>
+      <textarea name="message" rows="4" placeholder="अपना संदेश लिखें..." required></textarea>
+      <button type="submit">संदेश भेजें</button>
+    </form>
   </div>
 </div>
 
 <footer>
+  <p>📧 ईमेल: akgstudygroup@gmail.com</p>
   <div class="social-icons">
-    <a href="https://instagram.com/akgstudygroup" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/919569869194" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="mailto:akgstudysupport@gmail.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.threads.net/@akgstudygroup" target="_blank"><i class="fab fa-threads"></i></a>
+    <a href="https://www.youtube.com/@akgstudygroup" target="_blank">📺 YouTube</a>
+    <a href="https://instagram.com/akgstudygroup" target="_blank">📸 Instagram</a>
+    <a href="https://t.me/akgstudygroup" target="_blank">📲 Telegram</a>
+    <a href="https://wa.me/919999999999" target="_blank">💬 WhatsApp</a>
   </div>
-
-  <div class="contact-form">
-    <h3>📩 Contact Us</h3>
-    <form action="mailto:akgstudysupport@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="4"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
-  <p style="margin-top:20px;">© 2025 AKG STUDY GROUP. All rights reserved.</p>
+  <p>&copy; 2025 AKG Study Group. All Rights Reserved.</p>
 </footer>
 
 </body>
