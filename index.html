@@ -1,196 +1,199 @@
-<!DOCTYPE html>
-<html lang="hi">
+      <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GS Foundation Course – Daily Notes | AKG Study Group</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <title>Ebook Store | AKG Study Group</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
+      background: #f4f4f4;
     }
+
     header {
-      background: linear-gradient(135deg, #1f4e79, #3f87a6);
+      background: #2c3e50;
       color: white;
-      padding: 30px 20px;
+      padding: 20px;
       text-align: center;
-      animation: fadeInDown 1s ease-out;
     }
-    header h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
+
+    .ebook-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
     }
-    header p {
-      font-size: 16px;
-      margin: 0;
-    }
-    .notes-container {
-      max-width: 800px;
-      margin: 30px auto;
+
+    .ebook-card {
       background: white;
-      padding: 25px;
+      padding: 20px;
+      width: 300px;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      animation: fadeIn 1.5s ease;
-    }
-    .day {
-      margin-bottom: 20px;
-    }
-    .day h3 {
-      background: #eaf2ff;
-      padding: 12px;
-      margin: 0 0 10px;
-      border-left: 5px solid #1f4e79;
-      font-size: 18px;
-    }
-    .day a {
-      display: inline-block;
-      text-decoration: none;
-      background: #1f4e79;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
       transition: 0.3s;
     }
-    .day a:hover {
-      background: #163b5a;
+
+    .ebook-card:hover {
+      transform: translateY(-5px);
     }
 
-    .coupon-box {
-      margin: 20px 0;
-      padding: 15px;
-      background: #fff9e6;
-      border: 1px dashed #ffa500;
-      text-align: center;
-      border-radius: 8px;
-    }
-
-    footer {
-      background: #1f4e79;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    .social-icons a {
-      color: white;
-      margin: 0 10px;
+    .ebook-title {
       font-size: 20px;
-      text-decoration: none;
+      margin: 10px 0;
+      color: #34495e;
     }
 
-    .contact-form {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f8f8f8;
-      border-radius: 8px;
+    .ebook-price {
+      font-weight: bold;
+      color: #27ae60;
     }
-    .contact-form h3 {
+
+    .buttons {
+      margin-top: 15px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: white;
+      background: #2980b9;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    .buttons a.whatsapp {
+      background: #25D366;
+    }
+
+    .contact-section {
+      background: #ecf0f1;
+      padding: 40px;
       text-align: center;
+    }
+
+    .contact-section h2 {
       margin-bottom: 20px;
     }
-    .contact-form form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
     }
-    .contact-form input, .contact-form textarea {
+
+    input, textarea {
+      width: 100%;
       padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
     }
-    .contact-form button {
-      background: #1f4e79;
+
+    button {
+      background: #2c3e50;
       color: white;
-      padding: 10px;
-      font-size: 16px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 22px;
-      }
+    .social-icons a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #2980b9;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 25px;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
   </style>
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
-  <h1>🎓 Welcome to GS Foundation Course</h1>
-  <p>Day-wise Notes & PDFs by AKG Study Group</p>
+  <h1>📚 AKG Study Group – eBook Store</h1>
 </header>
 
-<div class="notes-container">
-
-  <div class="coupon-box">
-    🎁 Use Coupon Code <strong>AKG99</strong> to get Free PDF Access on Day 1-5. Limited Time Offer!
+<div class="ebook-container">
+  <div class="ebook-card">
+    <h3 class="ebook-title">5000+ GK Questions eBook</h3>
+    <p class="ebook-price">₹99 Only</p>
+    <div class="buttons">
+      <a href="https://rzp.io/l/ebook99" target="_blank">Buy Now</a>
+      <a href="https://wa.me/919999999999?text=Hi, I'm interested in the 5000+ GK eBook" class="whatsapp" target="_blank">WhatsApp</a>
+    </div>
   </div>
 
-  <div class="day">
-    <h3>📘 Day 1 – आधुनिक भारत का इतिहास</h3>
-    <a href="https://yourdomain.com/pdfs/day1.pdf" target="_blank">Download PDF</a>
+  <div class="ebook-card">
+    <h3 class="ebook-title">English Grammar Mastery</h3>
+    <p class="ebook-price">₹79 Only</p>
+    <div class="buttons">
+      <a href="https://rzp.io/l/grammar79" target="_blank">Buy Now</a>
+      <a href="https://wa.me/919999999999?text=Hi, I'm interested in the English Grammar eBook" class="whatsapp" target="_blank">WhatsApp</a>
+    </div>
   </div>
 
-  <div class="day">
-    <h3>📘 Day 2 – भारतीय भूगोल</h3>
-    <a href="https://yourdomain.com/pdfs/day2.pdf" target="_blank">Download PDF</a>
-  </div>
-
-  <div class="day">
-    <h3>📘 Day 3 – भारतीय संविधान</h3>
-    <a href="https://yourdomain.com/pdfs/day3.pdf" target="_blank">Download PDF</a>
-  </div>
-
-  <div class="day">
-    <h3>📘 Day 4 – विज्ञान</h3>
-    <a href="https://yourdomain.com/pdfs/day4.pdf" target="_blank">Download PDF</a>
-  </div>
-
-  <div class="day">
-    <h3>📘 Day 5 – अर्थव्यवस्था</h3>
-    <a href="https://yourdomain.com/pdfs/day5.pdf" target="_blank">Download PDF</a>
-  </div>
-
-  <!-- Add more days as needed -->
-
-  <div class="contact-form">
-    <h3>📩 संपर्क करें</h3>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="आपका नाम" required>
-      <input type="email" name="email" placeholder="ईमेल" required>
-      <textarea name="message" rows="4" placeholder="अपना संदेश लिखें..." required></textarea>
-      <button type="submit">संदेश भेजें</button>
-    </form>
+  <div class="ebook-card">
+    <h3 class="ebook-title">Science Quiz 450+ MCQs</h3>
+    <p class="ebook-price">₹89 Only</p>
+    <div class="buttons">
+      <a href="https://rzp.io/l/science89" target="_blank">Buy Now</a>
+      <a href="https://wa.me/919999999999?text=Hi, I'm interested in the Science MCQ eBook" class="whatsapp" target="_blank">WhatsApp</a>
+    </div>
   </div>
 </div>
 
-<footer>
-  <p>📧 ईमेल: akgstudygroup@gmail.com</p>
+<!-- Contact Section -->
+<section class="contact-section">
+  <h2>📩 Contact Us</h2>
+  <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
+    <input type="text" name="Name" placeholder="Your Name" required />
+    <input type="email" name="Email" placeholder="Your Email" required />
+    <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Social Media Links -->
   <div class="social-icons">
-    <a href="https://www.youtube.com/@akgstudygroup" target="_blank">📺 YouTube</a>
-    <a href="https://instagram.com/akgstudygroup" target="_blank">📸 Instagram</a>
-    <a href="https://t.me/akgstudygroup" target="_blank">📲 Telegram</a>
-    <a href="https://wa.me/919999999999" target="_blank">💬 WhatsApp</a>
+    <a href="https://facebook.com/akgstudygroup" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/akgstudygroup" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/akgstudygroup" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://youtube.com/@akgstudygroup" target="_blank"><i class="fab fa-youtube"></i></a>
   </div>
-  <p>&copy; 2025 AKG Study Group. All Rights Reserved.</p>
-</footer>
+</section>
+
+<!-- WhatsApp Floating -->
+<a href="https://wa.me/919999999999?text=Hello AKG Team, I need support regarding an eBook purchase." class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
